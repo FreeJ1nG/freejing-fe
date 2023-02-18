@@ -3,14 +3,18 @@ import "react-vertical-timeline-component/style.min.css";
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 
+import { Provider as ReduxProvider } from "react-redux";
 import { Navbar } from "@/common/components";
+import store from "@/modules/redux/store";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <div className="relative">
-      <Navbar />
-      <div className="h-16" />
-      <Component {...pageProps} />
-    </div>
+    <ReduxProvider store={store}>
+      <div className="relative">
+        <Navbar />
+        <div className="h-16" />
+        <Component {...pageProps} />
+      </div>
+    </ReduxProvider>
   );
 }
