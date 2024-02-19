@@ -5,7 +5,7 @@ const CV: FC = () => {
     <div className="w-full h-[calc(100vh-64px)] flex justify-center items-center py-10">
       <iframe
         className="w-[800px] h-full flex justify-center"
-        src="https://docs.google.com/document/d/e/2PACX-1vQ7WyobAiWMpN8WNjWAa3kSNyU7DtAh-s82fv6n_ie9UFaoacCIOKMGaxN8r3deCF2yAs4het0rdDSK/pub?embedded=true"
+        src={process.env.NEXT_PUBLIC_CV_URL}
       ></iframe>
     </div>
   );
